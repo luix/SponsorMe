@@ -1,2 +1,9 @@
-include ':app'
-rootProject.name='Developer Challenge'
+rootProject.name = 'Developer Challenge'
+
+enableFeaturePreview('GRADLE_METADATA')
+
+include 'common'
+
+if (INCLUDE_ANDROID == "true") {
+    include 'android', 'android:app'
+}
