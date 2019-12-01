@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/adc_hero"
+    android:background="@drawable/ic_adc_hero"
     tools:context=".MainActivity">
 
     <TextView
