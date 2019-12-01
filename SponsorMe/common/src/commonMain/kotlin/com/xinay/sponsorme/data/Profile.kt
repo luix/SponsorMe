@@ -1,4 +1,10 @@
 package com.xinay.sponsorme.data
 
-class Profile {
-}
+import io.ktor.util.date.GMTDate
+
+
+data class Profile(
+    val name: String,
+    val age: Int,
+    val dataOfBirth: GMTDate
+)
