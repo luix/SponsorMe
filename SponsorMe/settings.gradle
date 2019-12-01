@@ -1,4 +1,4 @@
-rootProject.name = 'Developer Challenge'
+rootProject.name = 'SponsorMe'
 
 enableFeaturePreview('GRADLE_METADATA')
 
