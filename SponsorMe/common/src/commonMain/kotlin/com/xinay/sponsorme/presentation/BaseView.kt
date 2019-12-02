@@ -1,4 +1,4 @@
-package org.jetbrains.sponsorme.presentation
+package com.xinay.sponsorme.presentation
 
 interface BaseView {
     fun showError(error: Throwable)
