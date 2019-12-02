@@ -1,10 +1,17 @@
 package com.xinay.sponsorme
 
+import android.app.Application
+import android.content.Context
+import com.xinay.sponsorme.api.END_POINT
+import com.xinay.sponsorme.storage.PlatformSettings
+import com.xinay.sponsorme.presentation.DataRepository
+import java.util.*
+
 class SponsorMeApplication : Application() {
 
     val dataRepository: DataRepository by lazy {
         val settingsFactory = PlatformSettings(applicationContext)
-        KotlinConfDataRepository(END_POINT, getUserId(), settingsFactory)
+        SponsorMeDataRepository(END_POINT, getUserId(), settingsFactory)
     }
 
     override fun onCreate() {
@@ -15,14 +22,11 @@ class SponsorMeApplication : Application() {
             throwable.printStackTrace()
             throwable?.cause?.printStackTrace()
         }
-
-        // Initialize Mapbox
-        Mapbox.getInstance(this, BuildConfig.MAPBOX_ACCESS_TOKEN)
     }
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
-        MultiDex.install(this)
+        //MultiDex.install(this)
     }
 
     private fun getUserId(): String = "android-" + UUID.randomUUID().toString()
