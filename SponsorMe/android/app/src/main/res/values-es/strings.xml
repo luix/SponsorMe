@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">PatrocinaMe</string>
+    <string name="video_call_label">Video Llamada</string>
+    <string name="audio_call_label">Audio Llamada</string>
+    <string name="chat_label">Mensajes de texto</string>
+    <string name="inbox_label">Bandeja</string>
+    <string name="gift_label">Regalo</string>
+    <string name="books_label">Libros</string>
+    <string name="calendar_label">Caledario</string>
+    <string name="get_involved_label">Involucrarse</string>
+    <string name="surprise_label">Sorpresa</string>
+    <string name="about_label">Acerca de</string>
+    <string name="sponsor_label">Patrocinador</string>
+</resources>

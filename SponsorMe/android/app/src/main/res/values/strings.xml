@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">SponsorMe</string>
+    <string name="video_call_label">Video Call</string>
+    <string name="audio_call_label">Audio Call</string>
+    <string name="chat_label">Chat</string>
+    <string name="inbox_label">InBox</string>
+    <string name="gift_label">Gift</string>
+    <string name="books_label">Books</string>
+    <string name="calendar_label">Caledar</string>
+    <string name="get_involved_label">Get Involved</string>
+    <string name="surprise_label">Surprise</string>
+    <string name="about_label">About</string>
+    <string name="sponsor_label">Sponsor</string>
 </resources>
