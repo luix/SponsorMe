@@ -1,4 +1,4 @@
 package com.xinay.sponsorme.api
 
-class Errors {
-}
+class UpdateProblem : Throwable()
+class Unauthorized : Throwable()
