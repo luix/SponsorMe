@@ -1,4 +1,4 @@
-package org.jetbrains.sponsorme.presentation
+package com.xinay.sponsorme.presentation
 
 import kotlinx.coroutines.*
 import kotlin.coroutines.*
