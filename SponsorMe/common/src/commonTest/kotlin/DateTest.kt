@@ -1,4 +1,4 @@
-package org.jetbrains.kotlinconf
+package com.xinay.sponsorme
 
 import io.ktor.util.date.*
 import kotlin.test.*
