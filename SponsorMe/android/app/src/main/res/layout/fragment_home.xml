@@ -1,16 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="73dp"
+        android:id="@+id/video_call_avatar"
+        android:contentDescription="@string/video_call_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        android:layout_marginBottom="81dp"
+        app:layout_constraintBottom_toTopOf="@+id/books_avatar"
+        app:layout_constraintEnd_toStartOf="@+id/audio_call_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_avatar"
         tools:srcCompat="@tools:sample/avatars[0]" />
+
+    <ImageView
+        android:id="@+id/audio_call_avatar"
+        android:contentDescription="@string/audio_call_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:layout_marginBottom="81dp"
+        app:layout_constraintBottom_toTopOf="@+id/inbox_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/video_call_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_avatar"
+        tools:srcCompat="@tools:sample/avatars[1]" />
+
+    <ImageView
+        android:id="@+id/chat_avatar"
+        android:contentDescription="@string/chat_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        android:layout_marginBottom="79dp"
+        app:layout_constraintBottom_toTopOf="@+id/video_call_avatar"
+        app:layout_constraintEnd_toStartOf="@+id/calendar_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[2]" />
+
+    <ImageView
+        android:id="@+id/books_avatar"
+        android:contentDescription="@string/books_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        android:layout_marginBottom="281dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/inbox_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_call_avatar"
+        tools:srcCompat="@tools:sample/avatars[3]" />
+
+    <ImageView
+        android:id="@+id/calendar_avatar"
+        android:contentDescription="@string/calendar_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:layout_marginBottom="79dp"
+        app:layout_constraintBottom_toTopOf="@+id/audio_call_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chat_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[4]" />
+
+    <ImageView
+        android:id="@+id/inbox_avatar"
+        android:contentDescription="@string/inbox_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:layout_marginBottom="281dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/books_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/audio_call_avatar"
+        tools:srcCompat="@tools:sample/avatars[5]" />
 </androidx.constraintlayout.widget.ConstraintLayout>
