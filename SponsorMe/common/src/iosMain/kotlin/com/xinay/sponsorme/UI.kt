@@ -1,4 +1,4 @@
-package org.jetbrains.sponsorme
+package com.xinay.sponsorme
 
 import kotlinx.coroutines.*
 import platform.darwin.*
