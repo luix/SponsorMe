@@ -1,4 +1,4 @@
-package org.jetbrains.sponsorme.storage
+package com.xinay.sponsorme.storage
 
 import platform.Foundation.*
 
