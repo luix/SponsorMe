@@ -1,4 +1,4 @@
-package com.xinay.sponsorme.data
+package com.xinay.sponsorme.model
 
 import io.ktor.util.date.GMTDate
 
