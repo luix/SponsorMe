@@ -1,8 +1,14 @@
-package com.xinay.sponsorme.data
+package com.xinay.sponsorme.repository
 
 import com.xinay.sponsorme.api.ServiceApi
+import com.xinay.sponsorme.api.UpdateProblem
 import com.xinay.sponsorme.presentation.DataRepository
 import com.xinay.sponsorme.storage.Settings
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.serializer
+import kotlin.properties.Delegates.observable
+import kotlin.properties.ReadWriteProperty
 
 class SponsorMeDataRepository(
     endPoint: String,
@@ -38,15 +44,7 @@ class SponsorMeDataRepository(
             throw UpdateProblem()
         }
 
-        val newSessions = state.allSessions()
-        val newFavorites = state.favoriteSessions()
-        val newVotes = state.votes
-        if (newSessions != sessions || newFavorites != favorites || newVotes != votes) {
-            sessions = newSessions
-            favorites = newFavorites
-            votes = newVotes
-            callRefreshListeners()
-        }
+        callRefreshListeners()
     }
 
     override fun acceptPrivacyPolicy() {
@@ -61,18 +59,23 @@ class SponsorMeDataRepository(
      * Local storage
      */
 
-    private inline fun <reified T : Any> read(key: String, elementSerializer: KSerializer<T>) = settings
-        .getString(key, "")
-        .takeUnless { it.isBlank() }
-        ?.let {
-            try {
-                Json.parse(elementSerializer, it)
-            } catch (_: Throwable) {
-                null
+    private inline fun <reified T : Any> read(key: String, elementSerializer: KSerializer<T>) =
+        settings
+            .getString(key, "")
+            .takeUnless { it.isBlank() }
+            ?.let {
+                try {
+                    Json.parse(elementSerializer, it)
+                } catch (_: Throwable) {
+                    null
+                }
             }
-        }
 
-    private inline fun <reified T : Any> write(key: String, obj: T?, elementSerializer: KSerializer<T>) {
+    private inline fun <reified T : Any> write(
+        key: String,
+        obj: T?,
+        elementSerializer: KSerializer<T>
+    ) {
         settings.putString(key, if (obj == null) "" else Json.stringify(elementSerializer, obj))
     }
 
@@ -82,3 +85,4 @@ class SponsorMeDataRepository(
     ): ReadWriteProperty<Any?, T?> = observable(read(key, elementSerializer)) { _, _, new ->
         write(key, new, elementSerializer)
     }
+}
