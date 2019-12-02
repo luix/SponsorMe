@@ -1,4 +1,4 @@
-package org.jetbrains.sponsorme.presentation
+package com.xinay.sponsorme.presentation
 
 class PrivacyPolicyPresenter(
     private val repository: DataRepository
