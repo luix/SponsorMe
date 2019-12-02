@@ -1,4 +1,4 @@
-package org.jetbrains.sponsorme.presentation
+package com.xinay.sponsorme.presentation
 
 class MainPresenter(
     private val navigationManager: NavigationManager,
