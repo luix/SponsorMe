@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.xinay.sponsorme.R
 
-class HomeFragment : Fragment() {
+class BooksFragment : Fragment() {
 
     companion object {
-        fun newInstance(): HomeFragment {
-            return HomeFragment()
+        fun newInstance(): BooksFragment {
+            return BooksFragment()
         }
     }
 
@@ -20,6 +20,6 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_books, container, false)
     }
 }

@@ -9,7 +9,7 @@ import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslatorOption
 import com.xinay.sponsorme.aitools.TranslatorHelper.languageTranslator
 
 // https://firebase.google.com/docs/ml-kit/android/translate-text
-object TranslatorHelper() {
+object TranslatorHelper {
     // Create an English-Spanish translator:
     val options = FirebaseTranslatorOptions.Builder()
         .setSourceLanguage(FirebaseTranslateLanguage.EN)
