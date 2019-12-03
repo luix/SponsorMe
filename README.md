@@ -11,8 +11,18 @@ SponsorMe application will be free of charge, but to make this project a reality
 
 
 
+## Open Source
 
-**Android Developer Challenge**
+As mentioned above, this will remain as an open source project and will be an application free of charge. This application is implemented using the following technologies:
+* Kotlin Programming Language
+* Android Jetpack
+* Kotlin Multiplatform
+* ML Kit's On-device Translation API 
+* Live Captions
+* and more!
+
+
+## Android Developer Challenge
 
 Android Developer Challenge: helpful innovation, powered by On-Device Machine Learning + you!
 
