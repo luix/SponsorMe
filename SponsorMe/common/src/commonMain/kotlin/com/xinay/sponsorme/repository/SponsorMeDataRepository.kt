@@ -15,7 +15,7 @@ class SponsorMeDataRepository(
     uid: String,
     private val settings: Settings
 ) : DataRepository {
-    private val api = ServiceApi(endPoint, uid)
+    private val api = ServiceApi(endPoint)
 
     override var userId: String? by bindToPreferencesByKey("userIdKey", String.serializer())
 
@@ -39,7 +39,8 @@ class SponsorMeDataRepository(
                 api.createUser(userId!!)
                 loggedIn = true
             }
-            api.getAll(userId)
+            //api.getAll(userId)
+            api.createUser("anonymous")
         } catch (cause: Throwable) {
             throw UpdateProblem()
         }
