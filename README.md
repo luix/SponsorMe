@@ -10,7 +10,6 @@ SponsorMe will be an open-source and free application available in Google Play S
 SponsorMe application will be free of charge, but to make this project a reality it will need the help and collaboration not only from individuals but also from technology companies, and organizations that already have established programs that help people in need.
 
 
-
 ## Open Source
 
 As mentioned above, this will remain as an open source project and will be an application free of charge. This application is implemented using the following technologies:
@@ -31,3 +30,5 @@ https://android-developers.googleblog.com/2019/10/android-developer-challenge.ht
 https://developer.android.com/dev-challenge
 
 #AndroidDevChallenge
+
+
