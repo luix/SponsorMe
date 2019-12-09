@@ -22,8 +22,11 @@ kotlin {
                 implementation "io.ktor:ktor-client-core:$ktor_version"
                 implementation "io.ktor:ktor-client-json:$ktor_version"
 
-                // yomero Dec-6
+                //
                 implementation "io.ktor:ktor-client-serialization:$ktor_version"
+                implementation "io.ktor:ktor-client-serialization-native:$ktor_version"
+                implementation "io.ktor:ktor-client-json:$ktor_version"
+                implementation "io.ktor:ktor-client-json-native:$ktor_version"
             }
         }
         commonTest {
