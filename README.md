@@ -32,7 +32,5 @@ https://developer.android.com/dev-challenge
 #AndroidDevChallenge
 
 
-9/Dic/2019
- 11/Dic/2019
 
 
